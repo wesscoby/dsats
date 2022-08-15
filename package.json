@@ -1,0 +1,50 @@
+{
+  "name": "dsats",
+  "version": "0.1.0",
+  "description": "Data Structures and Algorithms in Typescript",
+  "author": {
+    "name": "WessCoby",
+    "email": "wc@wesscoby.com",
+    "url": "https://wesscoby.com"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/dsats.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage",
+    "test:cov:watch": "tsdx test --coverage --watch",
+    "lint": "tsdx lint",
+    "lint:fix": "tsdx lint --fix",
+    "prepare": "tsdx build"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "eslint-plugin-tsdoc": "^0.2.16",
+    "husky": "^8.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  }
+}
