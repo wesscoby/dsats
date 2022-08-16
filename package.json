@@ -29,7 +29,7 @@
     "lint:fix": "tsdx lint --fix",
     "prepare": "tsdx build",
 		"commit": "git-cz",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release --branches main"
   },
   "dependencies": {
     "lodash": "^4.17.21",
