@@ -1,4 +1,4 @@
-name: Tests
+name: Main
 
 on:
   push:
@@ -37,6 +37,7 @@ jobs:
         run: yarn build
 
   coverage:
+    name: Upload coverage report to Codecov
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: [quality]
@@ -53,6 +54,7 @@ jobs:
         verbose: true
 
   publish:
+    name: Publish to NPM
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: [quality]
